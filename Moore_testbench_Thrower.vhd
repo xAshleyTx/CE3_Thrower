@@ -90,23 +90,23 @@ BEGIN
 		wait for 100 ns; 
       reset <= '1';	
 		
-      wait for clk_period*1;
+      wait for clk_period*2;
 -- from floor 1 to floor 2
-reset <= '0'
+reset <= '0';
       up_down <= '1';
 		stop <= '0';
-			wait for clk_period*1;
+			wait for clk_period*2;
 --floor 2
 			reset <= '0';
 		up_down <= '1';
 		stop <= '1';
 		--wait
-		wait for clk_period*1;
+		wait for clk_period*2;
 			
 			reset <= '0';
 			up_down <= '1';
 			stop <= '0';
-			wait for clk_period*1;
+			wait for clk_period*2;
 --floor 3
 		reset <= '0';
 		up_down <= '1';
@@ -116,7 +116,7 @@ reset <= '0'
 			reset <= '0';
 			up_down <= '1';
 			stop <= '0';
-			wait for clk_period*1;
+			wait for clk_period*2;
 -- floor 4
 			reset <= '0';
 			up_down <= '0';
